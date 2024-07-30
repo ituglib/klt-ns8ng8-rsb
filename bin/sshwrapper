@@ -1,0 +1,19 @@
+#!/bin/sh
+# Copyright (c) 2021-2024 Nexbridge Inc. Use granted as part of the NSGit T1198
+# End User License Agreement to licensed customers.
+#
+# The -Q option operations in quiet mode (required)
+# The -t option allocates a tty (recommended)
+# The -Z option suppresses the client banner (recommended)
+# The -S process parameter specifies the SSH2 process (optional)
+# The $* adds all arguments supplied by git to the command
+
+if [ "$1" = "-o" ]; then
+	# Suppressing -o because it is not supported by SSHOSS
+	# git supplies -o SendEnv=GIT_PROTOCOL
+	shift
+	shift
+fi
+
+exec /G/system/zssh/sshoss -Q -Z -t -S \$ZSS0 $*
+

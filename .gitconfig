@@ -1,0 +1,16 @@
+[core]
+        sshCommand = /home/ituglib/randall/bin/sshwrapper
+
+[user]
+	email = randall.becker@nexbridge.ca
+	name = Randall S. Becker
+
+[http]
+	sslVerify = false
+
+[init]
+	defaultBranch = main
+
+[ssh]
+        variant = ssh
+

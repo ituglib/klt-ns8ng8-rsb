@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/usr/coreutils/bin/make V=1 prefix=/usr/local-ssl3.0 CFLAGS='-g -Wlp64 -O2 -Winline -I/usr/include -I/usr/local-ssl3.0/include -I/usr/coreutils/include' LDFLAGS='-L/usr/local-ssl3.0/lib -L/usr/coreutils/lib -lklt' SHELL=/usr/coreutils/bin/bash
+

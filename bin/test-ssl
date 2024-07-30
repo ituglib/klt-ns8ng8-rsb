@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export TZ=MDT
+echo "Test started at" `date`
+#cd /home/randall/openssl
+OPENSSL_MODULES=`pwd`/providers _RLD_FIRST_LIB_PATH=`pwd`:$_RLD_FIRST_LIB_PATH make test -j4 $*
+#_RLD_FIRST_LIB_PATH=`pwd`:$_RLD_FIRST_LIB_PATH make test $*
+#_RLD_FIRST_LIB_PATH=`pwd`:$_RLD_FIRST_LIB_PATH make -j4 test $*
+#_RLD_FIRST_LIB_PATH=`pwd`:$_RLD_FIRST_LIB_PATH make test $*
+
+echo "Test ended at" `date`

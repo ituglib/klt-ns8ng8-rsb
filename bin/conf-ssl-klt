@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./Configure nonstop-nsx_64_klt --prefix=/usr/local-ssl3.0 --openssldir=/usr/local-ssl3.0/ssl --with-rand-seed=rdcpu threads enable-fips "-D_REENTRANT" $*

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+#cd /home/randall/openssl
+perl configdata.pm --dump
+
